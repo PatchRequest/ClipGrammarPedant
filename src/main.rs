@@ -49,7 +49,9 @@ fn main() -> Result<(), Box<dyn Error>> {
         model: "gpt-4o-mini".to_string(),
         messages: vec![ChatRequestMessage {
             role: "user".to_string(),
-            content: format!("Please correct the grammar and spelling of the following text, respond just with the text itself nothing else: {}", text),
+            content: format!("Please carefully review the following text for any grammar, spelling, or punctuation errors and correct them. Ensure the meaning and tone remain consistent with the original. Provide only the revised text as your response, without any additional comments or explanations:
+            
+            {}", text),
         }],
         temperature: 0.7,
     };
